@@ -16,8 +16,9 @@
           return no;
       }
 
-      const getResponse=async (api, no)=>{
+      const getResponse = async (api, no)=>{
         return await $.ajax(api + no);
+        
       }
 
       const printContact=({no, name, photo, tel, address})=>{
@@ -32,8 +33,10 @@
         const api="http://sample.bmaster.kro.kr/contacts/";
         init();
         const no = getNo();
+        // console.log(api + no)
+        console.log(location.search)
         const response = await getResponse(api, no);
-        console.log(response);
+        // console.log(response);
         printContact(response);
       });
     </script>
