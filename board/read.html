@@ -33,10 +33,7 @@
         const api="http://sample.bmaster.kro.kr/contacts/";
         init();
         const no = getNo();
-        // console.log(api + no)
-        console.log(location.search)
         const response = await getResponse(api, no);
-        // console.log(response);
         printContact(response);
       });
     </script>
